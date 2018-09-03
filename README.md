@@ -9,4 +9,4 @@ The project provides the training and testing code for partial person re-id, usi
 
 ## Experiment Setting:
 1. Backbone: ResNet-50, `stride = 1` in the last conv block.
-2. input image size: `384 &\times 192`
+2. input image size: `384 &times 192`
