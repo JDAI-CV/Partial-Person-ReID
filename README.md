@@ -21,7 +21,7 @@ Inspired by Houjing Huang's [person-reid-triplet-loss-baseline](https://github.c
 
 ## Person Re-identification
 ### Result on Market1501
-| Method | Single query |
+
    | Method | Rank-1 | mAP | 
 | - | :-: | -: | 
 | Baseline | 88.18| 73.85 | 
