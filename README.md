@@ -99,5 +99,3 @@ title = {Deep Spatial Feature Reconstruction for Partial Person Re-Identificatio
 booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 year = {2018}
 }```
-
-
