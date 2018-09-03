@@ -54,7 +54,7 @@ python script/experiment/train.py \
 --Spatial_train False \
 --total_epochs 400 
 ```
-   | Method | Rank-1 (Labeled) |
+   | Method | Rank-1 (Labeled) | mAP|
 | - | :-: | -: | 
 | Baseline | 80.48| 64.80 |
 | SFR | 84.83 |71.24 | 
