@@ -8,4 +8,4 @@ The project provides the training and testing code for partial person re-id, usi
 
 
 ## Experiment Setting:
-1. ccd
+1. Backbone: ResNet-50, <table><tr><td bgcolor=#D1EEEE>stride = 1：#D1EEEE</td></tr></table> in the last conv block
