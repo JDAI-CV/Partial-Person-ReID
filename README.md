@@ -6,7 +6,18 @@ CVPR18: [Deep Spatial Feature Reconstruction for Partial Person Re-identificatio
 
 The project provides the training and testing code for partial person re-id, using [Pytorch](https://pytorch.org/)
 
+## Instllation
+*****************************************************************************************************************
+It's recommended that you create and enter a python virtual environment, if versions of the packages required here conflict with yours.
+
+Other packages are specified in `requirements.txt`
+
+## Daset Preparation
+Inspired by Houjing Huang's [person-reid-triplet-loss-baseline](https://github.com/huanghoujing/person-reid-triplet-loss-baseline) project, you can follow his guidance.
 
 ## Experiment Setting:
 1. Backbone: ResNet-50, `stride = 1` in the last conv block.
 2. Input image size: `384 & times 192`
+
+## Person Re-identification
+### Dataset
