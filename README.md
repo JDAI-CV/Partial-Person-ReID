@@ -8,4 +8,4 @@ The project provides the training and testing code for partial person re-id, usi
 
 
 ## Experiment Setting:
-1. Backbone: ResNet-50, <table><tr><td bgcolor=#54FF9F>背景色的设置是按照十六进制颜色值：#54FF9F</td></tr></table>
+1. Backbone: ResNet-50, 深红色文字：<font color="#660000">stride = 1</font><br /> 
