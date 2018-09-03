@@ -21,8 +21,8 @@ Inspired by Houjing Huang's [person-reid-triplet-loss-baseline](https://github.c
 
 ## Person Re-identification
 ### Result on Market1501
-   Name | Academy | score 
-- | :-: | -: 
-Harry Potter | Gryffindor| 90 
-Hermione Granger | Gryffindor | 100 
-Draco Malfoy | Slytherin | 90
+   | Name | Academy | score | 
+| - | :-: | -: | 
+| Harry Potter | Gryffindor| 90 | 
+| Hermione Granger | Gryffindor | 100 | 
+| Draco Malfoy | Slytherin | 90 |
