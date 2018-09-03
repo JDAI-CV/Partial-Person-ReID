@@ -93,12 +93,12 @@ if you want to add the spatial feature reconstruction (SFR) in training term, pl
 
 If you find SFR is useful in your research, pls consider citing:
 
-@InProceedings{He_2018_CVPR,
+`@InProceedings{He_2018_CVPR,
 author = {He, Lingxiao and Liang, Jian and Li, Haiqing and Sun, Zhenan},
 title = {Deep Spatial Feature Reconstruction for Partial Person Re-Identification: Alignment-Free Approach},
 booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 month = {June},
 year = {2018}
-}
+}`
 
 
