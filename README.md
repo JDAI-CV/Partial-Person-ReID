@@ -43,7 +43,7 @@ python script/experiment/train.py \
 ```
    | Method | Rank-1 (Labeled) | mAP | Rank-1 (Detected)| mAP |
 | - | :-: | -: |  :-: | -: | 
-| Baseline | 62.14| 58.47 | 92.25 | 54.24|
+| Baseline | 62.14| 58.47 | 60.43 | 54.24|
 | SFR | 67.29 |61.47 | 63.86 | 58.97 |
 
 ### Result on Duke
