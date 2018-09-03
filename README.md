@@ -58,3 +58,33 @@ python script/experiment/train.py \
 | - | :-: | -: | 
 | Baseline | 80.48| 64.80 |
 | SFR | 84.83 |71.24 | 
+
+## Partial Person Re-identification
+### Result on Partial REID
+```
+python script/experiment/train.py \
+--dataset market1501 \
+--partial_dataset Partial_REID\
+--Spatial_train False \
+--total_epochs 400 
+```
+   | Method | Rank-1  | Rank-5 |
+| - | :-: | -: | 
+| Baseline | 54.80| 80.20 | 
+| SFR | 66.20 | 86.67 |
+
+### Result on Partial iLIDS
+```
+python script/experiment/train.py \
+--dataset market1501 \
+--partial_dataset Partial_iLIDS\
+--Spatial_train False \
+--total_epochs 400 
+```
+   | Method | Rank-1  | Rank-5 |
+| - | :-: | -: | 
+| Baseline | 46.22| 74.79 | 
+| SFR | 63.87 | 86.55 |
+
+
+if you want to add the spatial feature reconstruction (SFR) in training term, please set `Spatial_train=True` 
