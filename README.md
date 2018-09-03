@@ -87,4 +87,18 @@ python script/experiment/train.py \
 | SFR | 63.87 | 86.55 |
 
 
-if you want to add the spatial feature reconstruction (SFR) in training term, please set `Spatial_train=True` 
+if you want to add the spatial feature reconstruction (SFR) in training term, please set `Spatial_train=True`, but it would increase the training time.
+
+# Citing Light-Head R-CNN
+
+If you find SFR is useful in your research, pls consider citing:
+
+@InProceedings{He_2018_CVPR,
+author = {He, Lingxiao and Liang, Jian and Li, Haiqing and Sun, Zhenan},
+title = {Deep Spatial Feature Reconstruction for Partial Person Re-Identification: Alignment-Free Approach},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
+}
+
+
