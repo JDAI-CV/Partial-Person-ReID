@@ -21,11 +21,12 @@ Inspired by Houjing Huang's [person-reid-triplet-loss-baseline](https://github.c
 
 ## Person Re-identification
 ### Result on Market1501
+```
 `python script/dataset/transform_cuhk03.py \
 --zip_file ~/Dataset/cuhk03/cuhk03_release.zip \
 --train_test_partition_file ~/Dataset/cuhk03/re_ranking_train_test_split.pkl \
 --save_dir ~/Dataset/cuhk03`
-
+```
    | Method | Rank-1 (Single query) | mAP | Rank-1 (Multi query)| mAP |
 | - | :-: | -: |  :-: | -: | 
 | Baseline | 88.18| 73.85 | 92.25 | 80.96|
