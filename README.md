@@ -60,8 +60,10 @@ python script/experiment/train.py \
 | SFR | 84.83 |71.24 | 
 
 ## Partial Person Re-identification
-### Result on Partial REID
+The link of Partial REID and Partial iLIDS datasets: [Baidu Cloud](https://pan.baidu.com/s/1RWaGahSDO_bs6eWexBIxuw).
+
 Before run the code, you should revise the path in `Partial_REID_test.py` and `Partial_iLIDS_test.py` to your path.
+### Result on Partial REID
 
 ```
 python script/experiment/train.py \
