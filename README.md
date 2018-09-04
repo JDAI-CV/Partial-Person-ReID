@@ -53,7 +53,7 @@ python script/experiment/train.py \
 --partial_dataset others\
 --Spatial_train False \
 --total_epochs 400 
-```
+
    | Method | Rank-1 (Labeled) | mAP|
 | - | :-: | -: | 
 | Baseline | 80.48| 64.80 |
@@ -100,4 +100,4 @@ author = {He, Lingxiao and Liang, Jian and Li, Haiqing and Sun, Zhenan},
 title = {Deep Spatial Feature Reconstruction for Partial Person Re-Identification: Alignment-Free Approach},
 booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 year = {2018}
-} ```
+} 
