@@ -61,6 +61,8 @@ python script/experiment/train.py \
 
 ## Partial Person Re-identification
 ### Result on Partial REID
+Before run the code, you should revise the path in `Partial_REID_test.py` and `Partial_iLIDS_test.py` to your path.
+
 ```
 python script/experiment/train.py \
 --dataset market1501 \
@@ -89,7 +91,7 @@ python script/experiment/train.py \
 
 if you want to add the spatial feature reconstruction (SFR) in training term, please set `Spatial_train=True`, but it would increase the training time.
 
-# Citing Light-Head R-CNN
+# Citing Spatial Feature Reconstruction
 
 If you find SFR is useful in your research, pls consider citing:
 ```
@@ -98,4 +100,4 @@ author = {He, Lingxiao and Liang, Jian and Li, Haiqing and Sun, Zhenan},
 title = {Deep Spatial Feature Reconstruction for Partial Person Re-Identification: Alignment-Free Approach},
 booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 year = {2018}
-}```
+} ```
