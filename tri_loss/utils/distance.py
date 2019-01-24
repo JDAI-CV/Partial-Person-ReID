@@ -45,35 +45,55 @@ def compute_dist(array1, array2, type='euclidean'):
     dist = np.sqrt(squared_dist)
     return dist
 
-def dsr_dist(array1, array2):
-  """ Compute the sptial feature reconstruction of all pairs
-   array: [M, N, C] M: the number of query, N: the number of spatial feature, C: the dimension of each spatial feature
-   array2: [M, N, C] M: the number of gallery
-  :return:
-  numpy array with shape [m1, m2]
-  """
-
-  
-  kappa = 0.001
-  dist = torch.zeros(len(array1), len(array2))
-  dist = dist.cuda()
-
-  for i in range(0, len(array2)):
-    if (i%100==0):
-      print('{}/{} batches done'.format(i, len(array2)))
-    y = torch.FloatTensor(array2[i])
-    y = y.cuda()
-    T = kappa * torch.eye(y.size(1))
+def dsr_dist(array1, array2, distmat):
+    """ Compute the sptial feature reconstruction of all pairs
+     array: [M, N, C] M: the number of query, N: the number of spatial feature, C: the dimension of each spatial feature
+     array2: [M, N, C] M: the number of gallery
+    :return:
+    numpy array with shape [m1, m2]
+    """
+    # kappa = 0.002
+    #pdb.set_trace()
+    st = time.time()
+    dist = 100 * torch.ones(len(array1), len(array2))
+    dist = dist.cuda()
+    kappa = 0.0005
+    index = np.argsort(distmat,axis=1)
+    T = kappa * torch.eye(71)
     T = T.cuda()
-    Proj_M = torch.matmul(torch.inverse(torch.matmul(y.t(), y) + T), y.t()) # (Y^{T} * Y + kappa * I)^{-1} * Y^{T}
-    for j in range(0, len(array1)):
-      temp = array1[j]
-      temp = torch.FloatTensor(temp)
-      temp = temp.cuda()
-      a = torch.matmul(y, torch.matmul(Proj_M, temp)) - temp
-      dist[j, i] = torch.pow(a, 2).sum(0).sqrt().mean()
-  dist = dist.cpu()
-  dist = dist.numpy()
-  return dist
+    M = []
+    for i in range(0, len(array2)):
+        g = array2[i]
+        g = torch.FloatTensor(g)
+        g = g.view(g.size(0), g.size(1))
+        g = g.cuda()
+        Proj_M1 = torch.matmul(torch.inverse(torch.matmul(g.t(), g) + T), g.t())
+        Proj_M1 = Proj_M1.cpu().numpy()
+        M.append(Proj_M1)
+    print("cost time: {:.2f}s".format(time.time()-st))
+    st = time.time()
+    #print(len(array1))
+    for i in range(0, len(array1)):
+        if (i%500==0):
+            print('{}/{} batches done'.format(i, len(array1)))
+        q = torch.FloatTensor(array1[i])
+        q = q.view(q.size(0), q.size(1))
+        q = q.cuda()
+        #pdb.set_trace()
+        for j in range(0, 50):
+            g = array2[index[i,j]]
+            g = torch.FloatTensor(g)
+            g = g.view(g.size(0), g.size(1))
+            g = g.cuda()
+            #Proj_M = torch.matmul(torch.inverse(torch.matmul(g.t(), g) + T), g.t())
+            Proj_M = torch.FloatTensor(M[index[i,j]])
+            Proj_M = Proj_M.cuda()
+            a = torch.matmul(g, torch.matmul(Proj_M, q)) - q
+            dist[i, index[i,j]] = torch.pow(a, 2).sum(0).sqrt().mean()
+        #pdb.set_trace()
+    dist = dist.cpu()
+    dist = dist.numpy()
+    print("cost time: {:.2f}s".format(time.time()-st))
+    return dist
 
 
