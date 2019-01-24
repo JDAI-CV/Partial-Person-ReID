@@ -189,7 +189,7 @@ class Partial_iLIDS_test(Dataset):
         # query-gallery distance
         with measure_time('Computing distance...', verbose=verbose):
             q_g_global_dist = compute_dist(Probe, Gallery, type='euclidean')
-            q_g_sppatial_dist = dsr_dist(SpatialProbe, SpatialGallery)
+            q_g_sppatial_dist = dsr_dist(SpatialProbe, SpatialGallery, q_g_global_dist)
             for lam in range(0, 11):
                 mAP1 = []
                 cmc_scores1 = []

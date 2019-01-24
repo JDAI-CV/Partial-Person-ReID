@@ -187,7 +187,7 @@ class TestSet(Dataset):
     with measure_time('Computing distance...', verbose=verbose):
       # query-gallery distance
       q_g_global_dist = compute_dist(feat[q_inds], feat[g_inds], type='euclidean')
-      q_g_spatial_dist = dsr_dist(spatial_feat[q_inds], spatial_feat[g_inds])
+      q_g_spatial_dist = dsr_dist(spatial_feat[q_inds], spatial_feat[g_inds], q_g_global_dist)
       for lam in range(0, 11):
         weight = lam*0.1
         with measure_time('Computing scores...', verbose=verbose):
@@ -219,7 +219,7 @@ class TestSet(Dataset):
       with measure_time('Multi Query, Computing distance...', verbose=verbose):
         # multi_query-gallery distance
         mq_g_global_dist = compute_dist(mq_feat, feat[g_inds], type='euclidean')
-        mq_g_spatial_dist = dsr_dist(mq_spatial_feat, spatial_feature[g_inds], type='euclidean')
+        mq_g_spatial_dist = dsr_dist(mq_spatial_feat, spatial_feature[g_inds], mq_g_global_dist)
       for lam in range(0,11):
         weight = 0.1*lam
         with measure_time('Computing scores...', verbose=verbose):

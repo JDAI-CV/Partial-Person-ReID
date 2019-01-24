@@ -218,7 +218,7 @@ class Partial_REID_test(Dataset):
 
                     q_g_global_dist = compute_dist(Probe[q_inds], Gallery[g_inds], type='euclidean')
 
-                    q_g_spatial_dist = dsr_dist(SpatialProbe, SpatialGallery)
+                    q_g_spatial_dist = dsr_dist(SpatialProbe, SpatialGallery, q_g_global_dist)
 
                     global_dist.append(q_g_global_dist)
                     spatial_dist.append(q_g_spatial_dist)
