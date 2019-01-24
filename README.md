@@ -1,3 +1,6 @@
+Since the testing of the previous code was slow, we optimized it to speed up the model testing.
+
+
 # Partial-Person-ReID
 ******************************************************************************************************************
 
@@ -93,7 +96,6 @@ python script/experiment/train.py \
 
 if you want to add the spatial feature reconstruction (SFR) in training term, please set `Spatial_train=True`, but it would increase the training time.
 
-The updated code speeds up testing.
 
 # Citing Spatial Feature Reconstruction
 
