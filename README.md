@@ -93,6 +93,8 @@ python script/experiment/train.py \
 
 if you want to add the spatial feature reconstruction (SFR) in training term, please set `Spatial_train=True`, but it would increase the training time.
 
+The updated code speeds up testing.
+
 # Citing Spatial Feature Reconstruction
 
 If you find SFR is useful in your research, pls consider citing:
