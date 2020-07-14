@@ -1,0 +1,18 @@
+_BASE_: "../Base-AGW.yml"
+
+MODEL:
+  BACKBONE:
+    NAME: "build_resnest_backbone"
+
+  HEADS:
+    NUM_CLASSES: 702
+
+  LOSSES:
+    TRI:
+      MARGIN: 0.3
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+
+OUTPUT_DIR: "logs/dukemtmc/agw_S50"

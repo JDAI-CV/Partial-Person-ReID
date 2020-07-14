@@ -1,0 +1,12 @@
+_BASE_: "../Base-bagtricks.yml"
+
+MODEL:
+  HEADS:
+    NUM_CLASSES: 702
+
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+
+OUTPUT_DIR: "logs/dukemtmc/bagtricks_R50"

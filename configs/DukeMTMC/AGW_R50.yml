@@ -1,0 +1,12 @@
+_BASE_: "../Base-AGW.yml"
+
+MODEL:
+  HEADS:
+    NUM_CLASSES: 702
+
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+
+OUTPUT_DIR: "logs/dukemtmc/agw_R50"
